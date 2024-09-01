@@ -7,4 +7,6 @@ typedef struct State {
 	bool exit;
 } State;
 
+void poll_events(State *state);
+
 #endif // !DEBUG

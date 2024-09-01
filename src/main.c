@@ -13,12 +13,7 @@ int main(int argc, char *argv[]) {
 
   state.exit = false;
   while (!state.exit) {
-    SDL_Event event;
-    while (SDL_PollEvent(&event)) {
-      if (event.type == SDL_QUIT) {
-        state.exit = true;
-      }
-    }
+		poll_events(&state);
 		
 		render(&app);
   }
