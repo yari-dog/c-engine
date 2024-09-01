@@ -2,18 +2,21 @@
 
 #include "engine/init.h"
 #include "engine/render/render.h"
+#include "engine/state.h"
+
 App app;
+State state;
 
 int main(int argc, char *argv[]) {
 
   init(&app);
 
-  bool exit = false;
-  while (!exit) {
+  state.exit = false;
+  while (!state.exit) {
     SDL_Event event;
     while (SDL_PollEvent(&event)) {
       if (event.type == SDL_QUIT) {
-        exit = true;
+        state.exit = true;
       }
     }
 		
