@@ -13,9 +13,9 @@ int main(int argc, char *argv[]) {
 
   state.exit = false;
   while (!state.exit) {
-		poll_events(&state);
-		
-		render(&app);
+    poll_events(&state);
+
+    render(&app);
   }
 
   return 0;
